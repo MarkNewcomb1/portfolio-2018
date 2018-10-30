@@ -1,0 +1,78 @@
+/*
+	General styles
+*/
+* {
+	box-sizing: border-box;
+}
+body {
+	/* font-family: "Source Sans Pro", Arial, sans-serif; */
+	background-color: #c7e1ff;
+	font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/*
+	Styles to make the demo work
+*/
+p {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+.sections {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.section {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+	
+.section.one {
+	font-size: 40px;
+	font-family: 'HGS';
+	font-family: 'serif';
+	background-color: red;
+}
+
+.section.two {
+	background-color: blue;
+}
+
+.section.three {
+	background-color: yellow;
+}
+
+.section.four {
+	background-color: green;
+}    
+
+/*
+Fonts
+*/
+
+/* 100 Hairline
+200 Thin
+300 Light
+400 normal (default normal)
+500 Semibold
+600 ??
+700 bold (default bold)
+800 ??
+900 Black (heaviest there is) */
+
+@font-face {
+	font-family: "HGS";
+	font-style: normal;
+	font-weight: normal;
+	src:
+	local('HurmeGeometricSans2 Normal'),
+	local('HurmeGeometricsSans2-normal'),
+	url('../fonts/HGS2/HurmeGeometricSans2\ Normal.otf') format('opentype');
+}

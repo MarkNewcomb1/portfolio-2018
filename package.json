@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "scrollmagic": "^2.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkNewcomb1/portfolio-2018.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkNewcomb1/portfolio-2018/issues"
+  },
+  "homepage": "https://github.com/MarkNewcomb1/portfolio-2018#readme"
+}

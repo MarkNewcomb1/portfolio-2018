@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author"	content="Mark Newcomb (www.marknewcomb1.com)" />
+    <title>Mark Newcomb</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/lib/modernizr.custom.min.js"></script>
+	<script type="text/javascript" src="./assets/js/lib/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="./scrollmagic/uncompressed/ScrollMagic.js"></script>
+	<script type="text/javascript" src="./scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+	<!-- <script type="text/javascript" src="./scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
+</head>
+<body>
+    <div class="sections">
+        <div class="section one">
+            <p>Hello, I'm Mark Newcomb.</p>
+        </div>
+        <div class="section two">
+            <p>My projects at Galvanize</p>
+        </div>
+        <div class="section three">
+            <p>My projects from work</p>
+        </div>
+        <div class="section four">
+            <p>HIRE ME</p>
+        </div>
+    </div>
+        <script>
+            $(function () { // wait for document ready
+                    // init
+                    var controller = new ScrollMagic.Controller();
+
+                    // define movement of panels
+                    var wipeAnimation = new TimelineMax()
+                        .fromTo(".section.two", 1, {x: "1000%"}, {x: "0%", ease: Circ.easeIn})  // in from right
+                        .fromTo(".section.three", 5, {x: "1000%"}, {x: "0%", ease: Circ.easeIn}) // in from top
+                        .fromTo(".section.four", 5, {x: "1000%"}, {x: "0%", ease: Circ.easeIn}); // in from top
+
+                    // create scene to pin and link animation
+                    new ScrollMagic.Scene({
+                            triggerElement: ".sections",
+                            triggerHook: "onLeave",
+                            duration: "400%"
+                        })
+                        .setPin(".sections")
+                        .setTween(wipeAnimation)
+                        //.addIndicators()  add indicators (requires plugin)
+                        .addTo(controller);
+                });        
+        </script>
+    </div>
+</body>
+</html>
